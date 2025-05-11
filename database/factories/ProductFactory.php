@@ -13,11 +13,11 @@ class ProductFactory extends Factory
     protected $model = Product::class;
 
     private array $images = [
-        '2024-04/7228947268.webp',
-        '2024-04/7266574605.webp',
-        '2024-04/7320936551.webp',
-        '2024-05/7433832542.webp',
-        '2024-05/7490796926.webp',
+        'products/2024-04/7228947268.webp',
+        'products/2024-04/7266574605.webp',
+        'products/2024-04/7320936551.webp',
+        'products/2024-05/7433832542.webp',
+        'products/2024-05/7490796926.webp',
     ];
 
     public function definition(): array
