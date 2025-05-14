@@ -1,7 +1,7 @@
 init: storage-unlink restart storage-link
 up: docker-up
 down: docker-down
-restart: down up migrate-refresh seed
+restart: down up migrate-refresh seed frontend-up
 
 docker-up:
 	./vendor/bin/sail up -d
@@ -20,3 +20,6 @@ storage-link:
 
 storage-unlink:
 	./vendor/bin/sail php artisan storage:unlink
+
+frontend-up:
+	./vendor/bin/sail npm run dev

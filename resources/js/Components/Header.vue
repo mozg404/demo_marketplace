@@ -11,10 +11,10 @@ const user = computed(() => page.props.user)
     <header class="bg-white">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
-                <a href="/" class="-m-1.5 p-1.5">
+                <Link href="/" class="-m-1.5 p-1.5">
                     <span class="sr-only">Your Company</span>
                     <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="">
-                </a>
+                </Link>
             </div>
             <div class="flex lg:hidden">
                 <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
@@ -26,7 +26,7 @@ const user = computed(() => page.props.user)
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
                 <Link href="/" class="text-sm/6 font-semibold text-gray-900">Главная</Link>
-                <Link href="/registration" class="text-sm/6 font-semibold text-gray-900">Регистрация</Link>
+                <Link href="/catalog" class="text-sm/6 font-semibold text-gray-900">Каталог</Link>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 <div v-if="isAuth">

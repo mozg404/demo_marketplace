@@ -7,13 +7,13 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class IndexController extends Controller
+class CatalogController extends Controller
 {
-    public function __invoke()
+    public function show()
     {
-        $products = Product::query()->withShop()->take(8)->get();
+        $products = Product::query()->withShop()->orderBy('id', 'desc')->get();
 
-        return Inertia::render('Index', [
+        return Inertia::render('Catalog', [
             'products' => ProductData::collect($products)
         ]);
     }
