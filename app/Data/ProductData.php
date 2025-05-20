@@ -23,6 +23,4 @@ class ProductData extends Data
         $this->imageUrl = Storage::url($this->image);
         $this->url = route('product.show', $this->id);
     }
-
-
 }

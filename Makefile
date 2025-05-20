@@ -23,3 +23,6 @@ storage-unlink:
 
 frontend-up:
 	./vendor/bin/sail npm run dev
+
+project-init:
+	./vendor/bin/sail php artisan project:init

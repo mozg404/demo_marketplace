@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Product;
+use App\Models\Shop;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,8 +14,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([
-            UserSeeder::class,
-        ]);
+        User::factory()
+            ->has(
+                Shop::factory()->count(2)->has(
+                    Product::factory()->count(30)
+                )
+            )
+            ->create([
+                'email' => 'user@gmail.com',
+            ]);
+
+        User::factory()
+            ->has(
+                Shop::factory()->count(rand(1, 3))->has(
+                    Product::factory()->count(rand(2, 10))
+                )
+            )
+            ->count(4)
+            ->create();
+
+//        $this->call([
+//            UserSeeder::class,
+//        ]);
     }
 }

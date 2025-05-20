@@ -13,7 +13,7 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
 
-        return Inertia::render('Cabinet/Profile', [
+        return Inertia::render('cabinet/Profile', [
             'id' => $user->id,
             'name' => $user->name,
             'email' => $user->email,

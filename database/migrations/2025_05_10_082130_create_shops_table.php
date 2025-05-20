@@ -16,6 +16,10 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('name', 255);
             $table->string('slug', 255);
+            $table->string('description', 255)->default('');
+            $table->string('inn', 12);
+            $table->string('address', 255)->default('');
+            $table->string('phone', 15)->nullable();
             $table->timestamps();
         });
     }

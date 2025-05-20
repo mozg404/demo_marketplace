@@ -17,4 +17,9 @@ class CatalogController extends Controller
             'products' => ProductData::collect($products)
         ]);
     }
+
+    public function showProduct($id)
+    {
+        $product = Product::query()->find($id);
+    }
 }
